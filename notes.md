@@ -123,3 +123,15 @@ https://facebook.github.io/jest/docs/expect.html#content
 First you write the test, then you implement it, then you refactor
 
 So, you write out all the test you want to pass, then go through each and get that to pass, untill all pass
+
+
+**Tradeoffs with TDD**
+
+TDD doesnt work very well if you don't know what the API will look like.  How do you get the benefits if you dont know what the api will look like?.. Write the code and get the api how you want it, and then start over and write it again with TDD.
+
+TDD is good for utility functions like this.. but not so great for the DOM.
+
+
+
+
+
