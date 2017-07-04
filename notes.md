@@ -115,3 +115,11 @@ this makes it easy to reason about the tests.
 https://facebook.github.io/jest/docs/expect.html#content
 .toMatchObJect
 .toEqual - deep equality
+
+
+
+### Test Driven Development
+
+First you write the test, then you implement it, then you refactor
+
+So, you write out all the test you want to pass, then go through each and get that to pass, untill all pass
