@@ -133,5 +133,8 @@ TDD is good for utility functions like this.. but not so great for the DOM.
 
 
 
+## fixing bugs
 
 
+
+expect({name: 'alex', age: 25}).toMatchObect({age: 25}) ==> looks to deep equal the second object.. so if the first has more values that the second, that is ok
