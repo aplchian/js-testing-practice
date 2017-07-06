@@ -153,3 +153,43 @@ test('toProfileJSONFor returns the correct object', () => {
 
 })
 ```
+
+## integration testing
+
+higher level than unit test
+
+for an api, you would run the whole server .. 
+
+```
+import startServer from '../start-server'
+import axios from 'axios'
+
+let server
+
+beforeAll(() => {
+  return startServer().then(s => {
+    server = s
+  })
+})
+
+afterAll(done => {
+  server.close(done)
+})
+
+
+test('can get users', () => {
+  return axios.get('http://localhost:3001/api/users').then(res => {
+    const user = res.data.users[0]
+    console.log('user',user)
+    expect(user).toMatchObject({
+        name: expect.any(String),
+        username: expect.any(String),
+        
+    })
+  })
+})
+
+
+```
+
+you want to avoid tests being couple to each other.. like the first test posts a user, and the second dest updates it.. so the second would fail if the first didnt happen.
