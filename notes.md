@@ -189,7 +189,16 @@ test('can get users', () => {
   })
 })
 
+instead of using try catch block you can do a 
+const result = await iWantToReturnAPromise().catch(err => err)
 
 ```
 
 you want to avoid tests being couple to each other.. like the first test posts a user, and the second dest updates it.. so the second would fail if the first didnt happen.
+
+
+try {
+  const result = await iWantToReturnAPromise()
+}catch(e){
+
+}
